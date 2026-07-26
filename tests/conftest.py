@@ -7,6 +7,7 @@ from playwright.sync_api import Browser, BrowserContext, Page, Playwright
 from framework.config import settings
 from framework.pages.home_page import HomePage
 
+from framework.pages.login_page import LoginPage
 
 @pytest.fixture(scope="session")
 def browser_type_launch_args() -> dict[str, Any]:
@@ -86,3 +87,7 @@ def page(
 @pytest.fixture
 def home_page(page: Page) -> HomePage:
     return HomePage(page)
+
+@pytest.fixture
+def login_page(page: Page) -> LoginPage:
+    return LoginPage(page)

@@ -8,7 +8,7 @@ from dataclasses import dataclass
 @ dataclass(frozen=True) 
 # frozen = True means that these value cannot change accidnetally while the tests are running
 class Settings:
-    base_url:str ="https://conduit-realworld-example-app.fly.dev/"
+    base_url:str ="https://v4.practicesoftwaretesting.com/#/"
     api_url: str = "https://conduit-realworld-example-app.fly.dev/api"
 
     browser_name: str = "chromium"
